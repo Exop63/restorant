@@ -1,0 +1,19 @@
+<div class="justify-content-center d-flex search">
+    <div class="col">
+        <nb-form-field>
+            <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+            <input type="text" nbInput fullWidth>
+        </nb-form-field>
+    </div>
+</div>
+
+<nb-card class="own-scroll" [nbSpinner]="info?.isLoading">
+
+    <nb-list class="justify-content-center" nbInfiniteList [threshold]="500" (bottomThreshold)="loadNext()">
+        <nb-list-item class="p-0 m-2" *ngFor="let food of foods">
+            <ngx-list-item [food]="food"></ngx-list-item>
+
+        </nb-list-item>
+
+    </nb-list>
+</nb-card>

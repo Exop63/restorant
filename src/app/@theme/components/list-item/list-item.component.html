@@ -1,0 +1,30 @@
+<nb-card class="parent">
+    <nb-card-body class="container">
+        <div class="rage">
+            <nb-icon icon="star"></nb-icon> {{food?.storeInfo?.rate}}
+        </div>
+        <img [src]="getImage()">
+
+        <div class="mx-2 p-1">
+            <strong>{{food?.title}}</strong>
+
+            <table class="w-100">
+                <tbody>
+                    <tr>
+                        <td> <small>Lorem, ipsum, dolor</small></td>
+                        <td class="right"><small>Min. Sipariş Tutarı: ₺{{food.storeInfo.minOrderPrice}}</small> </td>
+                    </tr>
+                    <tr>
+                        <td> <small class="font-weight-bold" *ngIf="food['distance']">{{food['distance']}} km
+                                yakında</small></td>
+                        <td class="right"><small class="font-weight-bold on">İşletme Açık &nbsp;</small> <small>
+                                {{food?.storeInfo?.workingHours[0].open}} /
+                                {{food?.storeInfo?.workingHours[0].close}}</small> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </nb-card-body>
+
+
+</nb-card>
