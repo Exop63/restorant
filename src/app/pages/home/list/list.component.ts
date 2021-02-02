@@ -34,7 +34,6 @@ export class ListComponent implements OnInit {
         this.info.isEnd = true;
         return;
       }
-      console.log("Response:", response);
       this.foods = [...this.foods, ...response];
     });
   }
